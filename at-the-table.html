@@ -45,6 +45,7 @@
           <h2>Keep a mission log</h2>
           <p>Record a question, strategy, or memorable moment from the session.</p>
           <form id="mission-log">
+            <!-- The wrap attribute controls how textarea text is submitted. With wrap="hard", line breaks are added wherever the text wraps inside the textarea, whereas with wrap="soft", the text would wrap visually in the entry boxm, but not when submitted. The button uses a similar script to the one on index. -->
             <textarea id="mission-note" name="mission-note" cols="45" rows="5" wrap="hard" aria-label="Mission note">What do I want to try next time?</textarea>
             <p><button type="submit">Save mission note</button></p>
           </form>
