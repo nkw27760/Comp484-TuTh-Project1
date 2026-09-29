@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280">
+  <rect width="800" height="280" fill="#153746"/>
+  <path d="M90 214 L174 64 L224 64 L256 123 L316 58 L372 58 L344 214 L294 214 L309 126 L260 176 L230 176 L204 126 L160 214 Z" fill="#e05b42"/>
+  <path d="M426 214 L465 64 L520 64 L491 173 L593 173 L582 214 Z" fill="#f1b44b"/>
+  <path d="M616 64 L704 64 L694 102 L658 102 L629 214 L577 214 L606 102 L606 102 L616 64 Z" fill="#f1eee6"/>
+  <text x="91" y="252" fill="#f1eee6" font-family="Arial, Helvetica, sans-serif" font-size="22" letter-spacing="6">BEGINNER FIELD GUIDE</text>
+</svg>

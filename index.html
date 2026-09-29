@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>LANCER:// First Drop</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header role="banner">
+      <h1>LANCER:// First Drop</h1>
+      <p>An introductory guide on everything you need to play your first LANCER campaign.</p>
+      <nav role="navigation">
+        <ul>
+          <li><a href="index.html" title="Read the LANCER guide overview">Start Here</a></li>
+          <li><a href="setting.html" title="Get an introduction to the LANCER setting">The Setting</a></li>
+          <li><a href="pilot-and-mech.html" title="Learn the basic pilot and mech choices">Pilot and Mech</a></li>
+          <li><a href="first-drop.html" title="Learn what to do before the first session">Before Session One</a></li>
+          <li><a href="at-the-table.html" title="Prepare for a first mission">At the Table</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main role="main">
+      <article role="article">
+        <section class="intro">
+          <!-- I used the object element here to embed an image into the page. I found the logo image and referenced it here. This is NOT best practice, <object> is mainly used to embed more complex files like PDFs. Static images should be embedded with <img> instead. -->
+          <!-- The border attribute controls the old object's border presentation; I used border="5" to add some emphasis to the image, but still keep things clean. -->
+          <object data="images/lancerlogo2.webp" type="image/svg+xml" border="5">
+            LANCER TTRPG logo image
+          </object>
+          <h2>Welcome, Pilot.</h2>
+          <!-- The span element marks a short phrase without starting a new block. I gave this one the class tag so CSS can give the QUICK START label its own visual treatment while keeping it inside the paragraph. -->
+          <p><span class="tag">QUICK START</span> LANCER is a tabletop roleplaying game created by Miguel Lopez and Tom Bloom about mech pilots, political exploitation, and the difficult choices people need to make in a world where corpo-states and renegades alike vie for control over the outskirts of a supposed utopia. I made this guide as crash-course way to learn the &quot;shape&quot; of the game before you get into the finer details of fleshing out your character, refining your build, and jumping into your first session of actual gameplay.</p>
+          <!-- The button element can be used to create an obvious interactive control for users. I implemented this one as a visible reminder with a command attribute, which will be explained further down. -->
+          <button type="button" id="guide-button" command="show-guide" title="Show the guide's main reminder">Remember: Let yourself be new</button>
+          <p id="guide-message" hidden>You do not need to memorize every single rule, and you don't need to play your character perfectly. Start with the basics, it&apos;s impossible to be a paragon player right off the bat. Give yourself permission to not know everything. Focus on just having fun, the rest will come naturally with time.</p>
+        </section>
+        <section>
+          <h2>Four steps before takeoff:</h2>
+          <ol>
+            <li>Learn about the setting, the powers that be, and how your character will fit within it all.</li>
+            <li>Learn about the interplay between the pilot side and mech side of the game, and how each contributes to the campaign narrative.</li>
+            <li>Learn how and what to prep to bring to your campaign&apos;s first session.</li>
+            <li>Learn what you should expect at the table and get ready for mission deployment.</li>
+          </ol>
+          <p class="callout"><a href="https://compcon.app/#/" title="Open the COMP/CON LANCER tool">COMP&sol;CON</a> is an incredibly useful tool for making chartacter sheets and browsing the compendium. It's essentially the go&dash;to place for anything pertaining to actually playing the game.</p>
+          <!-- This script reads the button's command attribute and performs the matching action when the button is clicked. Command="show-guide" labels the button’s intended action, getAttribute("command") reads that label, the if statement checks the label, and finaly, the script reveals or hides the reminder when the button is clicked. -->
+          <script>
+            const guideButton = document.getElementById("guide-button"); 
+            const guideMessage = document.getElementById("guide-message"); 
+            const command = guideButton.getAttribute("command"); 
+          
+            guideButton.addEventListener("click", function () {
+              if (command === "show-guide") {
+                guideMessage.hidden = !guideMessage.hidden;
+              }
+            });
+          </script>
+        </section>
+      </article>
+    </main>
+    <footer role="contentinfo">
+      <p>An unofficial LANCER getting-started guide by Nick Wu. <a href="https://compcon.app/#/" title="Open the COMP&sol;CON LANCER tool">Visit COMP/CON</a>.</p>
+    </footer>
+  </body>
+</html>
